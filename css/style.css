@@ -1,0 +1,117 @@
+body {
+  font-family: 'Jost', sans-serif;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header__container{
+  padding: 19px 15px;
+}
+.logo svg {
+  fill: #377DFF;
+  width: 177px;
+  height: 73px;
+  transition: all .3s ease;
+}
+.logo svg:hover {
+  fill: #1e65eb;
+}
+.nav__item:not(:last-child) {
+  padding: 0 30px;
+}
+.nav__link {
+  position: relative;
+  color: #77838F;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s ease;
+}
+.nav__link.active,
+.nav__link:hover {
+  color: #2F2D51;
+}
+.nav__link.has-child::after,
+.nav__link.has-child-active::after {
+  content:'';
+  position: absolute;
+  right: -25px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+.nav__link.has-child-active::after {
+  background-image: url(../images/arrow-active.svg);
+}
+.nav__link.has-child::after {
+  background-image: url(../images/arrow.svg);
+}
+.header__bouttons-count {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #090761;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 3px;
+  text-align: center;
+}
+.header__buttons-button {
+  margin-left: 30px;
+}
+.header__buttons-button a svg {
+  fill: #949DA6;
+  width: 20px;
+  height: 20px;
+  transition: all .2s ease;
+}
+.header__buttons-button a svg:hover {
+  fill: #2F2D51;
+}
+@media (max-width:1000px) {
+  .logo svg {
+    width: 150px;
+  }
+  .nav__item:not(:last-child) {
+    padding: 0 14px;
+  }
+  .nav__link.has-child::after, .nav__link.has-child-active::after {
+    right: -15px;
+  }
+  .header__buttons-button {
+    margin-left: 18px;
+  }
+  .header__container {
+    padding: 10px 0;
+  }
+}
+@media (max-width:768px) {
+  .container {
+    max-width: 600px;
+  }
+  .nav__link {
+    font-size: 12px;
+  }
+  .nav__item:not(:last-child) {
+    padding: 0 10px;
+  }
+  .nav__link.has-child::after, .nav__link.has-child-active::after {
+    right: -12px;
+  }
+  .header__buttons-button {
+    margin-left: 15px;
+  }
+}
